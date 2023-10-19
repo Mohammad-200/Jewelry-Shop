@@ -51,70 +51,70 @@ const cartCountElement = document.querySelector(".js-products-in-cart");
 export const newArrival = [
   {
     productId: "1",
-    productImage: "../newArrival-images/ec8dbd9f8e14b9d23d321f749cdffdc8.jpg",
+    productImage: "./newArrival-images/ec8dbd9f8e14b9d23d321f749cdffdc8.jpg",
     productPrice: "380 €",
     productName: "14k Rose Gold Ring with Swarovski",
     status: "New",
   },
   {
     productId: "2",
-    productImage: "../newArrival-images/8f1f21d8cc8a4c9d06c2ccd64db44eeb.jpg",
+    productImage: "./newArrival-images/8f1f21d8cc8a4c9d06c2ccd64db44eeb.jpg",
     productPrice: "440 €",
     productName: "14K Rose silver Earrings with Zirconia",
     status: "New",
   },
   {
     productId: "3",
-    productImage: "../newArrival-images/8b1264b1aea283b1cf8d9962b090f46d.jpg",
+    productImage: "./newArrival-images/8b1264b1aea283b1cf8d9962b090f46d.jpg",
     productPrice: "120 €",
     productName: "925 Silver Bracelet with Coral and Hematite",
     status: "New",
   },
   {
     productId: "4",
-    productImage: "../newArrival-images/33fb4e86e90d28372394066e6ec7ba42.jpg",
+    productImage: "./newArrival-images/33fb4e86e90d28372394066e6ec7ba42.jpg",
     productPrice: "510 €",
     productName: "14K Gold Ring with Zirconia",
     status: "New",
   },
   {
     productId: "5",
-    productImage: "../newArrival-images/5990d49e1154ffe51de92f53aef01eb4.jpg",
+    productImage: "./newArrival-images/5990d49e1154ffe51de92f53aef01eb4.jpg",
     productPrice: "300 €",
     productName: "14k Rose Gold Ring with Swarovski",
     status: "New",
   },
   {
     productId: "6",
-    productImage: "../newArrival-images/42770c356dadf2c7ca64bcde6f5226bd.jpg",
+    productImage: "./newArrival-images/42770c356dadf2c7ca64bcde6f5226bd.jpg",
     productPrice: "710 €",
     productName: "'Talpita' Gold earrings",
     status: "New",
   },
   {
     productId: "7",
-    productImage: "../newArrival-images/9027240a2466699c263250b6bf0ca591.jpg",
+    productImage: "./newArrival-images/9027240a2466699c263250b6bf0ca591.jpg",
     productPrice: "150 €",
     productName: "14k Rose Gold Ring with Swarovski",
     status: "New",
   },
   {
     productId: "8",
-    productImage: "../newArrival-images/76505834c2fc64165d4e4749641aca62.jpg",
+    productImage: "./newArrival-images/76505834c2fc64165d4e4749641aca62.jpg",
     productPrice: "270 €",
     productName: "14K Yellow Gold Ring with Zirconia",
     status: "New",
   },
   {
     productId: "9",
-    productImage: "../newArrival-images/fed39a8ac3dc47f57ea6418f89bee5a9.jpg",
+    productImage: "./newArrival-images/fed39a8ac3dc47f57ea6418f89bee5a9.jpg",
     productPrice: "180 €",
     productName: "14K Rose Gold Earrings with Swarovski Zirconia",
     status: "New",
   },
   {
     productId: "10",
-    productImage: "../newArrival-images/3cfcb3a8682e55b776663590ed865e92.jpg",
+    productImage: "./newArrival-images/3cfcb3a8682e55b776663590ed865e92.jpg",
     productPrice: "400 €",
     productName: "14K Rose Gold Necklace with Diamonds 'Clover'",
     status: "New",
@@ -264,7 +264,7 @@ plusEl4.addEventListener("click", () => {
  export const sales = [
   {
     productId: "11",
-    productImage: "../onsale-products/3aa9d11edfabe731e414c016f78b0596.jpg",
+    productImage: "./onsale-products/3aa9d11edfabe731e414c016f78b0596.jpg",
     productPrice: "190 €",
     productName: "14k Rose Gold Ring with Swarovski",
     oldPrice: "245 €",
@@ -272,7 +272,7 @@ plusEl4.addEventListener("click", () => {
   },
   {
     productId: "12",
-    productImage: "../onsale-products/3cfcb3a8682e55b776663590ed865e92.jpg",
+    productImage: "./onsale-products/3cfcb3a8682e55b776663590ed865e92.jpg",
     productPrice: "825 €",
     productName: "14K Rose Gold Necklace with Diamonds 'Clover'",
     oldPrice: "990 €",
@@ -280,7 +280,7 @@ plusEl4.addEventListener("click", () => {
   },
   {
     productId: "13",
-    productImage: "../onsale-products/99dc4458720a3f70576313abd677a9a4.jpg",
+    productImage: "./onsale-products/99dc4458720a3f70576313abd677a9a4.jpg",
     productPrice: "630 €",
     productName: "Ring for men in 14K Rose Gold with Corundum Sapphire",
     oldPrice: "750 €",
@@ -288,7 +288,7 @@ plusEl4.addEventListener("click", () => {
   },
   {
     productId: "14",
-    productImage: "../onsale-products/b40df3b73ba99952acbf7825b13ce44b.jpg",
+    productImage: "./onsale-products/b40df3b73ba99952acbf7825b13ce44b.jpg",
     productPrice: "490 €",
     productName: "14K Rose Gold Ring with Swarovski Topaz",
     oldPrice: "610 €",
@@ -296,7 +296,7 @@ plusEl4.addEventListener("click", () => {
   },
   {
     productId: "15",
-    productImage: "../onsale-products/dc1a0f0b373a39457e30347fa7baf3fc.jpg",
+    productImage: "./onsale-products/dc1a0f0b373a39457e30347fa7baf3fc.jpg",
     productPrice: "400 €",
     productName: "14K Rose Gold Ring with Swarovski Topaz",
     oldPrice: "500 €",
@@ -304,7 +304,7 @@ plusEl4.addEventListener("click", () => {
   },
   {
     productId: "16",
-    productImage: "../onsale-products/e7d0e8795a82079f8febb644de869c3d.jpg",
+    productImage: "./onsale-products/e7d0e8795a82079f8febb644de869c3d.jpg",
     productPrice: "410 €",
     productName: "14k Rose Gold Ring with Swarovski",
     oldPrice: "510 €",
@@ -312,7 +312,7 @@ plusEl4.addEventListener("click", () => {
   },
   {
     productId: "17",
-    productImage: "../onsale-products/fa92485d0f7cc91cedd1ba5b91122058.jpg",
+    productImage: "./onsale-products/fa92485d0f7cc91cedd1ba5b91122058.jpg",
     productPrice: "230 €",
     productName: "14K Gold Ring with Zirconia",
     oldPrice: "300 €",
@@ -460,7 +460,7 @@ watchIcon4.addEventListener("click", () => {
 const watches = [
   {
     productId: "18",
-    productImage: "../watches-images/2c84752c79c6f2952284ffd03dbac29b.jpg",
+    productImage: "./watches-images/2c84752c79c6f2952284ffd03dbac29b.jpg",
     productPrice: "200 €",
     productName: "Steel watch for men",
     oldPrice: "290 €",
@@ -468,7 +468,7 @@ const watches = [
   },
   {
     productId: "19",
-    productImage: "../watches-images/948e65d8ce1e75e935693e01f40c0db6.jpg",
+    productImage: "./watches-images/948e65d8ce1e75e935693e01f40c0db6.jpg",
     productPrice: "120 €",
     productName: "black watch for men",
     oldPrice: "190 €",
@@ -476,7 +476,7 @@ const watches = [
   },
   {
     productId: "20",
-    productImage: "../watches-images/dcdc396ec418fd244dae5f5286438920.jpg",
+    productImage: "./watches-images/dcdc396ec418fd244dae5f5286438920.jpg",
     productPrice: "170 €",
     productName: "covered unisex Steel Watch",
     oldPrice: "290 €",
@@ -484,7 +484,7 @@ const watches = [
   },
   {
     productId: "21",
-    productImage: "../watches-images/5354141035d12c6ebc3ba48c50157422 (1).jpg",
+    productImage: "./watches-images/5354141035d12c6ebc3ba48c50157422 (1).jpg",
     productPrice: "120 €",
     productName: "Unisex Steel Watch",
     oldPrice: "190 €",
@@ -492,7 +492,7 @@ const watches = [
   },
   {
     productId: "22",
-    productImage: "../watches-images/af214896188f387c72e76a4ca7661591.jpg",
+    productImage: "./watches-images/af214896188f387c72e76a4ca7661591.jpg",
     productPrice: "240 €",
     productName: "white watch for women",
     oldPrice: "350 €",
@@ -500,7 +500,7 @@ const watches = [
   },
   {
     productId: "23",
-    productImage: "../watches-images/c67ad5148c3671aa67e0cf2afa81156a.jpg",
+    productImage: "./watches-images/c67ad5148c3671aa67e0cf2afa81156a.jpg",
     productPrice: "230 €",
     productName: "Steel watch for women",
     oldPrice: "300 €",
@@ -508,7 +508,7 @@ const watches = [
   },
   {
     productId: "24",
-    productImage: "../watches-images/d3ecd7bfea66af95f86c538be409f236.jpg",
+    productImage: "./watches-images/d3ecd7bfea66af95f86c538be409f236.jpg",
     productPrice: "420 €",
     productName: "Steel watch for women",
     oldPrice: "310 €",
@@ -516,7 +516,7 @@ const watches = [
   },
   {
     productId: "25",
-    productImage: "../watches-images/2190228fab9e04ad953bd4b8012b5c28.jpg",
+    productImage: "./watches-images/2190228fab9e04ad953bd4b8012b5c28.jpg",
     productPrice: "310 €",
     productName: "Women's Steel Watch with Zirconia",
     oldPrice: "400 €",
