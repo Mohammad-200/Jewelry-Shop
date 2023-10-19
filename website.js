@@ -230,7 +230,7 @@ video.addEventListener("ended", function () {
 plusEl1.addEventListener("click", () => {
   imageRingEl.style.opacity = 0;
   setTimeout(() => {
-    imageRingEl.src = "video-pics/ring-design.jpeg";
+    imageRingEl.src = "./video-pics/ring-design.jpeg";
     imageRingEl.style.opacity = 1;
   }, 200);
 });
@@ -238,7 +238,7 @@ plusEl1.addEventListener("click", () => {
 plusEl2.addEventListener("click", () => {
   imageRingEl.style.opacity = 0;
   setTimeout(() => {
-    imageRingEl.src = "video-pics/ring-diamonds.jpeg";
+    imageRingEl.src = "./video-pics/ring-diamonds.jpeg";
     imageRingEl.style.opacity = 1;
   }, 200);
 });
@@ -246,7 +246,7 @@ plusEl2.addEventListener("click", () => {
 plusEl3.addEventListener("click", () => {
   imageRingEl.style.opacity = 0;
   setTimeout(() => {
-    imageRingEl.src = "/video-pics/ring-diamonds2.jpeg";
+    imageRingEl.src = "./video-pics/ring-diamonds2.jpeg";
     imageRingEl.style.opacity = 1;
   }, 200);
 });
@@ -254,7 +254,7 @@ plusEl3.addEventListener("click", () => {
 plusEl4.addEventListener("click", () => {
   imageRingEl.style.opacity = 0;
   setTimeout(() => {
-    imageRingEl.src = "video-pics/ring-monogramm.jpeg";
+    imageRingEl.src = ".video-pics/ring-monogramm.jpeg";
     imageRingEl.style.opacity = 1;
   }, 200);
 });
@@ -428,7 +428,7 @@ watchVideo.addEventListener("ended", function () {
 watchIcon1.addEventListener("click", () => {
   watchImage.style.opacity = 0;
   setTimeout(() => {
-    watchImage.src = "watches-images/watch-strap.jpeg";
+    watchImage.src = "./watches-images/watch-strap.jpeg";
     watchImage.style.opacity = 1;
   }, 200);
 });
@@ -436,7 +436,7 @@ watchIcon1.addEventListener("click", () => {
 watchIcon2.addEventListener("click", () => {
   watchImage.style.opacity = 0;
   setTimeout(() => {
-    watchImage.src = "watches-images/watch-mechanism.jpeg";
+    watchImage.src = "./watches-images/watch-mechanism.jpeg";
     watchImage.style.opacity = 1;
   }, 200);
 });
@@ -444,7 +444,7 @@ watchIcon2.addEventListener("click", () => {
 watchIcon3.addEventListener("click", () => {
   watchImage.style.opacity = 0;
   setTimeout(() => {
-    watchImage.src = "watches-images/watch-case.jpeg";
+    watchImage.src = "./watches-images/watch-case.jpeg";
     watchImage.style.opacity = 1;
   }, 200);
 });
@@ -452,7 +452,7 @@ watchIcon3.addEventListener("click", () => {
 watchIcon4.addEventListener("click", () => {
   watchImage.style.opacity = 0;
   setTimeout(() => {
-    watchImage.src = "watches-images/watch-design.jpeg";
+    watchImage.src = "./watches-images/watch-design.jpeg";
     watchImage.style.opacity = 1;
   }, 200);
 });
