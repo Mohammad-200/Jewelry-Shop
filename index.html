@@ -1,228 +1,602 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEWELRY</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/dimond-nobackround.jpg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Kumbh+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;500;700&family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+import { addToCart, updateCartCount } from "./cart/cart.js";
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <div class="navbar-container">
-                <div class="logo">
-                    <p>Jewelry</p>
-                    <p>your beauty</p>
-                </div>
-                    <ul>
-                        <li class="pro"><a href="#newArrival-section">Products</a></li>
-                        <li class="watches"><a href="#watch-products">Watches</a></li>
-                        <li class="3d-view"><a href="#3D-view">3D view</a></li>
-                        <li class="sales"><a href="#sales-products">Sales</a></li>
-                    </ul>
-                <div class="cart">
-                    <a href="./cart/cart.html"><i class="fa fa-shopping-bag" style="font-size:24px;"></i></a>
-                    <p class="products-in-cart js-products-in-cart">0</p>
-                    <img class="userLog-img" src="images/user-log-picture.jpg">
-                </div>
-                
-            </div>
-        </div>
-    </header>
+
+const video = document.getElementById("videoPlayer");
+const repeatButton = document.querySelector(".repeat");
+const imageRingEl = document.querySelector(".ring-image");
+const plusEl1 = document.getElementById("plus-icon1");
+const plusEl2 = document.querySelector(".plus-icon2");
+const plusEl3 = document.querySelector(".plus-icon3");
+const plusEl4 = document.querySelector(".plus-icon4");
+const plusIcons = document.querySelectorAll(".plus-icon");
+const repeatbtnEl = document.querySelector(".repeat");
+const salesEl = document.querySelector(".sales-cont");
+const arrow1El = document.querySelector(".arrow1");
+const arrow2El = document.querySelector(".arrow2");
+const itemsContainer = document.querySelector(".sales-container");
+
+// watches
+
+const watchVideo = document.querySelector("#watchVideoPlayer");
+const watchPlucEl = document.querySelector(".watch-plus-icon");
+const watchIcon1 = document.querySelector(".watch-plus-icon1");
+const watchIcon2 = document.querySelector(".watch-plus-icon2");
+const watchIcon3 = document.querySelector(".watch-plus-icon3");
+const watchIcon4 = document.querySelector(".watch-plus-icon4");
+const repeatWatch = document.querySelector(".repeatWatch");
+const watchImage = document.querySelector(".watch-image");
+const watchArrow1 = document.querySelector(".watchArrow1");
+const watchArrow2 = document.querySelector(".watchArrow2");
+
+// first Row Products
+
+const firstRowEl = document.querySelector(".firstRow-products");
+const firstRowArrow1 = document.querySelector(".firstRowArrow1");
+const firstRowArrow2 = document.querySelector(".firstRowArrow2");
+
+const cartCountElement = document.querySelector(".js-products-in-cart");
+
+
+ function changeOpacityBtn(itemDiv, cartBtn) {
+   itemDiv.addEventListener("mouseenter", () => {
+     cartBtn.style.opacity = "1";
+   });
+   itemDiv.addEventListener("mouseleave", () => {
+     cartBtn.style.opacity = "0";
+   });
+ }
+
+
+
+export const newArrival = [
+  {
+    productId: "1",
+    productImage: "./newArrival-images/ec8dbd9f8e14b9d23d321f749cdffdc8.jpg",
+    productPrice: "380 €",
+    productName: "14k Rose Gold Ring with Swarovski",
+    status: "New",
+  },
+  {
+    productId: "2",
+    productImage: "./newArrival-images/8f1f21d8cc8a4c9d06c2ccd64db44eeb.jpg",
+    productPrice: "440 €",
+    productName: "14K Rose silver Earrings with Zirconia",
+    status: "New",
+  },
+  {
+    productId: "3",
+    productImage: "./newArrival-images/8b1264b1aea283b1cf8d9962b090f46d.jpg",
+    productPrice: "120 €",
+    productName: "925 Silver Bracelet with Coral and Hematite",
+    status: "New",
+  },
+  {
+    productId: "4",
+    productImage: "./newArrival-images/33fb4e86e90d28372394066e6ec7ba42.jpg",
+    productPrice: "510 €",
+    productName: "14K Gold Ring with Zirconia",
+    status: "New",
+  },
+  {
+    productId: "5",
+    productImage: "./newArrival-images/5990d49e1154ffe51de92f53aef01eb4.jpg",
+    productPrice: "300 €",
+    productName: "14k Rose Gold Ring with Swarovski",
+    status: "New",
+  },
+  {
+    productId: "6",
+    productImage: "./newArrival-images/42770c356dadf2c7ca64bcde6f5226bd.jpg",
+    productPrice: "710 €",
+    productName: "'Talpita' Gold earrings",
+    status: "New",
+  },
+  {
+    productId: "7",
+    productImage: "./newArrival-images/9027240a2466699c263250b6bf0ca591.jpg",
+    productPrice: "150 €",
+    productName: "14k Rose Gold Ring with Swarovski",
+    status: "New",
+  },
+  {
+    productId: "8",
+    productImage: "./newArrival-images/76505834c2fc64165d4e4749641aca62.jpg",
+    productPrice: "270 €",
+    productName: "14K Yellow Gold Ring with Zirconia",
+    status: "New",
+  },
+  {
+    productId: "9",
+    productImage: "./newArrival-images/fed39a8ac3dc47f57ea6418f89bee5a9.jpg",
+    productPrice: "180 €",
+    productName: "14K Rose Gold Earrings with Swarovski Zirconia",
+    status: "New",
+  },
+  {
+    productId: "10",
+    productImage: "./newArrival-images/3cfcb3a8682e55b776663590ed865e92.jpg",
+    productPrice: "400 €",
+    productName: "14K Rose Gold Necklace with Diamonds 'Clover'",
+    status: "New",
+  },
+];
+
+
+
+
+
+  newArrival.forEach((item) => {
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("item");
+
+    const productImage = document.createElement("img");
+    productImage.classList.add("products");
+    productImage.src = item.productImage;
+
+    const price = document.createElement("p");
+    price.classList.add("price");
+    price.textContent = item.productPrice;
+
+    const productName = document.createElement("p");
+    productName.classList.add("product-name");
+    productName.textContent = item.productName;
+
+    const status = document.createElement("p");
+    status.classList.add("status");
+    status.textContent = item.status;
+
+    const cartBtn = document.createElement("button");
+    cartBtn.classList.add("cart-btn");
+    cartBtn.classList.add('js-cart-btn');
+    cartBtn.textContent = "Add to cart";
+    cartBtn.setAttribute("data-product-id", item.productId);
+
+    changeOpacityBtn(itemDiv, cartBtn);
+
+    itemDiv.appendChild(productImage);
+    itemDiv.appendChild(price);
+    itemDiv.appendChild(productName);
+    itemDiv.appendChild(status);
+    itemDiv.appendChild(cartBtn);
+
+    firstRowEl.appendChild(itemDiv);
+
+    });
+
+
     
 
-    <main>
-        <div class="main">
-            <div class="main-pics">
-                <div class="slides">
-                    <!--radio buttons -->
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-                    <!--radio buttons -->
+    
+    
 
-                    <!--slide images-->
-                    <div class="slide first">
-                        <img class="main-image" src="main-images/main-img1.jpg">
-                    </div>
-                    <div class="slide">
-                        <img src="main-images/banner-bridal5.png">
-                    </div>
-                    <div class="slide">
-                        <img src="main-images/main-img3.webp">
-                    </div>
-                    <div class="slide">
-                        <img src="main-images/main4.webp">
-                    </div>
 
-                    <!-- automatic navication -->
-                    <div class="navigation-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-                    </div>
-                </div>
-                <!--manual navigation-->
-                <div class="navigation-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
-                </div>
-            </div>
 
-            <!--products-->
-            <div id="newArrival-section" class="slider">
-                <h1 class="firstRow-h">New arrival</h1>
-                <div class="firstRow-container">
-                     <span class="firstRowArrow1">&#10148;</span>
-                    <div  class="firstRow-products">
-                        <!-- <div class="item">
-                            <img class="products" src="watches-images/2190228fab9e04ad953bd4b8012b5c28.jpg">
-                            <p class="price">825 €</p>
-                            <p class="product-name">14K Rose Gold Necklace with Diamonds 'Clover'</p>
-                            <p class="status">New</p>
-                            <button class="cart-btn">Add</button>
-                        </div>
-                        <div class="item">
-                            <img class="products" src="watches-images/2190228fab9e04ad953bd4b8012b5c28.jpg">
-                            <p class="price">825 €</p>
-                            <p class="product-name">14K Rose Gold Necklace with Diamonds 'Clover'</p>
-                            <p class="status">New</p>
-                            <button class="cart-btn">Add</button>
-                        </div> -->
-                </div>
-                <span class="firstRowArrow2">&#10148;</span>
-                </div>
-                
-            </div>
-            <!--Video section-->
-            <h1  class="h1-video" id="3D-view">SPEACIAL</h1>
-            <div class="video-container" id="video-container">
-                <div class="video-content">
-                    <video id="videoPlayer">
-                        <source src="video-pics/ring.mp4">
-                    </video>
-                    <img id="ring-image" class="ring-image"src="video-pics/ring-diamonds.jpeg" alt="ring-image">
-                    <div class="repeat">
-                        <img  src="video-pics/repeat-picture.png">
-                        <button class="video-button">3D play</button>  
-                    </div>
-                    <div class="video-icons">
-                        <div class="icons-container">
-                        <img id="plus-icon1" class="plus-icon1 plus-icon" src="video-pics/plus-icon.svg.png">
-                        <img  class="plus-icon2 plus-icon" src="video-pics/plus-icon.svg.png">
-                        <img  class="plus-icon3 plus-icon" src="video-pics/plus-icon.svg.png">
-                        <img  class="plus-icon4 plus-icon" src="video-pics/plus-icon.svg.png">
-                        </div> 
-                    </div>
-                </div>
-            </div> 
-            <!--Sales part-->
-            <div class="sales-cont" id="sales-products">
-                <div class="sales-header">
-                    <h2 class="sales-header">Sales</h2>
-                </div>
-                <div class="arrows-sales-container">
-                    <span class="arrow1">&#10148;</span>
-                    <div class="sales-container">
-                    <!-- <div class="item">
-                        <img class="products" src="onsale-products/3aa9d11edfabe731e414c016f78b0596.jpg">
-                        <p class="price">180 €</p>
-                        <p class="product-name">14k Rose Gold Ring with Swarovski</p>
-                        <p class="old-price">245 €</p>
-                        <p class="onSale">20 %</p>
-                    </div-->
-                    
-                </div>
-                    <span class="arrow2">&#10148;</span>
-                </div>
-            </div>
-            <h2 class="watches-header" id="watch-products">Watches</h2>
-            <div class="video-container">
-                <div class="video-content">
-                    <video id="watchVideoPlayer">
-                        <source src="watches-images/watch.mp4">
-                    </video>
-                    <img id="watch-image" class="watch-image"src="watches-images/watch-strap.jpeg" alt="watch-image">
-                    <div class="repeatWatch">
-                        <img  src="video-pics/repeat-picture.png">
-                        <button class="video-button">3D play</button>  
-                    </div>
-                    <div class="watch-video-icons">
-                        <div class="icons-container">
-                        <img id="watch-plus-icon1" class="watch-plus-icon1 watch-plus-icon" src="video-pics/plus-icon.svg.png">
-                        <img  class="watch-plus-icon2 watch-plus-icon" src="video-pics/plus-icon.svg.png">
-                        <img  class="watch-plus-icon3 watch-plus-icon" src="video-pics/plus-icon.svg.png">
-                        <img  class="watch-plus-icon4 watch-plus-icon" src="video-pics/plus-icon.svg.png">
-                        </div> 
-                    </div>
-                </div>
-            </div> 
-            <!-- watch products -->
-            <div class="watch-container">
-                <div class="watches-arrows-container">
-                     <span class="watchArrow1">&#10148;</span>
-                    <div class="watch-products">
-                        <!-- <div class="item">
-                            <img class="products" src="watches-images/2190228fab9e04ad953bd4b8012b5c28.jpg">
-                            <p class="price">825 €</p>
-                            <p class="product-name">14K Rose Gold Necklace with Diamonds 'Clover'</p>
-                            <p class="old-price">1080 €</p>
-                            <p class="onSale">20 %</p>
-                        </div> -->
-                </div>
-                <span class="watchArrow2">&#10148;</span>
-                </div>
-            </div>
 
-            <!-- last part -->
-            <h1 id="collections">Collections</h1>
-            <div class="main-container">
-                <div class="left-side">
-                    <img id="wedding" src="last-images/wedding.jpg">
-                    <img id="gifts" src="last-images/gifts.jpg">
-                    <img id="diamonds-img" src="last-images/diamonds.jpg">
-                </div>
-                <div class="right-side">
-                    <div class="words">
-                        <p>Jewelry and watch capsule collections</p>
-                        <p>are unique developments of our own jewelry design office.</p>
-                        <p>We create more than just design: we create trends.</p>
-                    </div>
-                    <img id="infinity" src="last-images/infinity.jpg">
-                    <div class="lastImages-container">
-                        <img id="lastWatch" src="last-images/watch.jpg">
-                        <img id="newLook" src="last-images/new-look.jpg">
-                    </div>
-                </div>
-            </div>
+firstRowArrow2.addEventListener("click", () => {
+  firstRowEl.style.scrollBehavior = "smooth";
+  firstRowEl.scrollLeft += 271;
+});
 
-            <!-- ending -->
-            <div class="ending">
-                <div class="main-ending">
-                    <p>SO COOL LOVE</p>
-                </div>
-                <div class="ending-words">
-                    <p>Each gem in your jewelry box has a special story associated with it.</p>
-                    <p>All those elusive moments you want to keep forever are in JEWELRY</p>
-                    <p>This is what is in your heart.</p>
-                </div>
-            </div>
+firstRowArrow1.addEventListener("click", () => {
+  firstRowEl.style.scrollBehavior = "smooth";
+  firstRowEl.scrollLeft -= 271;
+});
 
-    </main>
-    <script type="module" src="website.js"></script>
-</body>
-</html>
+// auto change for main image
+let counter = 1;
+setInterval(function () {
+  document.getElementById("radio" + counter).checked = true;
+  counter++;
+  if (counter > 4) {
+    counter = 1;
+  }
+}, 5000);
+
+//ring video
+
+function hidePlusIcon() {
+  plusIcons.forEach((icon) => {
+    icon.classList.add("hidden");
+    icon.style.display = "none";
+  });
+}
+
+function showPlusIcon() {
+  plusIcons.forEach((icon) => {
+    icon.classList.remove("hidden");
+    icon.style.display = "block";
+  });
+}
+
+function hideRepeatBtn() {
+  repeatbtnEl.style.display = "none";
+}
+
+function showRepeatBtn() {
+  repeatbtnEl.style.display = "block";
+}
+
+repeatButton.addEventListener("click", function () {
+  video.currentTime = 0;
+  video.play();
+  hidePlusIcon();
+});
+
+
+video.addEventListener("ended", function () {
+  showPlusIcon();
+});
+
+plusEl1.addEventListener("click", () => {
+  imageRingEl.style.opacity = 0;
+  setTimeout(() => {
+    imageRingEl.src = "video-pics/ring-design.jpeg";
+    imageRingEl.style.opacity = 1;
+  }, 200);
+});
+
+plusEl2.addEventListener("click", () => {
+  imageRingEl.style.opacity = 0;
+  setTimeout(() => {
+    imageRingEl.src = "video-pics/ring-diamonds.jpeg";
+    imageRingEl.style.opacity = 1;
+  }, 200);
+});
+
+plusEl3.addEventListener("click", () => {
+  imageRingEl.style.opacity = 0;
+  setTimeout(() => {
+    imageRingEl.src = "/video-pics/ring-diamonds2.jpeg";
+    imageRingEl.style.opacity = 1;
+  }, 200);
+});
+
+plusEl4.addEventListener("click", () => {
+  imageRingEl.style.opacity = 0;
+  setTimeout(() => {
+    imageRingEl.src = "video-pics/ring-monogramm.jpeg";
+    imageRingEl.style.opacity = 1;
+  }, 200);
+});
+
+//sales products
+
+ export const sales = [
+  {
+    productId: "11",
+    productImage: "./onsale-products/3aa9d11edfabe731e414c016f78b0596.jpg",
+    productPrice: "190 €",
+    productName: "14k Rose Gold Ring with Swarovski",
+    oldPrice: "245 €",
+    discount: "20 %",
+  },
+  {
+    productId: "12",
+    productImage: "./onsale-products/3cfcb3a8682e55b776663590ed865e92.jpg",
+    productPrice: "825 €",
+    productName: "14K Rose Gold Necklace with Diamonds 'Clover'",
+    oldPrice: "990 €",
+    discount: "20 %",
+  },
+  {
+    productId: "13",
+    productImage: "./onsale-products/99dc4458720a3f70576313abd677a9a4.jpg",
+    productPrice: "630 €",
+    productName: "Ring for men in 14K Rose Gold with Corundum Sapphire",
+    oldPrice: "750 €",
+    discount: "20 %",
+  },
+  {
+    productId: "14",
+    productImage: "./onsale-products/b40df3b73ba99952acbf7825b13ce44b.jpg",
+    productPrice: "490 €",
+    productName: "14K Rose Gold Ring with Swarovski Topaz",
+    oldPrice: "610 €",
+    discount: "20 %",
+  },
+  {
+    productId: "15",
+    productImage: "./onsale-products/dc1a0f0b373a39457e30347fa7baf3fc.jpg",
+    productPrice: "400 €",
+    productName: "14K Rose Gold Ring with Swarovski Topaz",
+    oldPrice: "500 €",
+    discount: "20 %",
+  },
+  {
+    productId: "16",
+    productImage: "./onsale-products/e7d0e8795a82079f8febb644de869c3d.jpg",
+    productPrice: "410 €",
+    productName: "14k Rose Gold Ring with Swarovski",
+    oldPrice: "510 €",
+    discount: "20 %",
+  },
+  {
+    productId: "17",
+    productImage: "./onsale-products/fa92485d0f7cc91cedd1ba5b91122058.jpg",
+    productPrice: "230 €",
+    productName: "14K Gold Ring with Zirconia",
+    oldPrice: "300 €",
+    discount: "20 %",
+  },
+];
+
+// Get the sales container div
+const salesContainer = document.querySelector(".sales-cont .sales-container");
+
+// Iterate through the sales array and create HTML elements for each item
+sales.forEach((item) => {
+  // Create div element for each item
+  const itemDiv = document.createElement("div");
+  itemDiv.className = "item";
+
+  // Create image element
+  const img = document.createElement("img");
+  img.className = "products";
+  img.src = item.productImage;
+
+  // Create paragraphs for price, product name, old price, and discount
+  const price = document.createElement("p");
+  price.className = "price";
+  price.textContent = item.productPrice;
+
+  const productName = document.createElement("p");
+  productName.className = "product-name";
+  productName.textContent = item.productName;
+
+  const oldPrice = document.createElement("p");
+  oldPrice.className = "old-price";
+  oldPrice.textContent = item.oldPrice;
+
+  const discount = document.createElement("p");
+  discount.className = "onSale";
+  discount.textContent = item.discount;
+
+  const cartBtn = document.createElement("button");
+  cartBtn.classList.add("cart-btn");
+  cartBtn.classList.add("js-cart-btn");
+  cartBtn.textContent = "Add to cart";
+  cartBtn.setAttribute("data-product-id", item.productId);
+  
+
+  changeOpacityBtn(itemDiv, cartBtn);
+
+  // Append elements to item div
+  itemDiv.appendChild(img);
+  itemDiv.appendChild(price);
+  itemDiv.appendChild(productName);
+  itemDiv.appendChild(oldPrice);
+  itemDiv.appendChild(discount);
+  itemDiv.appendChild(cartBtn);
+
+  // Append item div to sales container
+  salesContainer.appendChild(itemDiv);
+});
+
+
+
+
+arrow2El.addEventListener("click", () => {
+  itemsContainer.style.scrollBehavior = "smooth";
+  itemsContainer.scrollLeft += 271;
+  console.log("clicked");
+});
+
+arrow1El.addEventListener("click", () => {
+  itemsContainer.style.scrollBehavior = "smooth";
+  itemsContainer.scrollLeft -= 271;
+  console.log("clicked");
+});
+
+//watch video
+
+function hideWatchIcon() {
+  watchPlucEl.forEach((icon) => {
+    icon.classList.add("hidden");
+    icon.style.display = "none";
+  });
+}
+
+function showWatchIcon() {
+  watchPlucEl.forEach((icon) => {
+    icon.classList.remove("hidden");
+    icon.style.display = "block";
+  });
+}
+
+function hideRepeatWatch() {
+  repeatWatch.style.display = "none";
+}
+
+function showRepeatWatch() {
+  repeatWatch.style.display = "block";
+}
+
+repeatWatch.addEventListener("click", function () {
+  watchVideo.currentTime = 0;
+  watchVideo.play();
+  hideWatchIcon();
+  hideRepeatWatch();
+});
+
+// auto display code ??
+
+watchVideo.addEventListener("ended", function () {
+  showWatchIcon();
+  showRepeatWatch();
+});
+
+watchIcon1.addEventListener("click", () => {
+  watchImage.style.opacity = 0;
+  setTimeout(() => {
+    watchImage.src = "watches-images/watch-strap.jpeg";
+    watchImage.style.opacity = 1;
+  }, 200);
+});
+
+watchIcon2.addEventListener("click", () => {
+  watchImage.style.opacity = 0;
+  setTimeout(() => {
+    watchImage.src = "watches-images/watch-mechanism.jpeg";
+    watchImage.style.opacity = 1;
+  }, 200);
+});
+
+watchIcon3.addEventListener("click", () => {
+  watchImage.style.opacity = 0;
+  setTimeout(() => {
+    watchImage.src = "watches-images/watch-case.jpeg";
+    watchImage.style.opacity = 1;
+  }, 200);
+});
+
+watchIcon4.addEventListener("click", () => {
+  watchImage.style.opacity = 0;
+  setTimeout(() => {
+    watchImage.src = "watches-images/watch-design.jpeg";
+    watchImage.style.opacity = 1;
+  }, 200);
+});
+
+const watches = [
+  {
+    productId: "18",
+    productImage: "./watches-images/2c84752c79c6f2952284ffd03dbac29b.jpg",
+    productPrice: "200 €",
+    productName: "Steel watch for men",
+    oldPrice: "290 €",
+    status: "20 %",
+  },
+  {
+    productId: "19",
+    productImage: "./watches-images/948e65d8ce1e75e935693e01f40c0db6.jpg",
+    productPrice: "120 €",
+    productName: "black watch for men",
+    oldPrice: "190 €",
+    status: "20 %",
+  },
+  {
+    productId: "20",
+    productImage: "./watches-images/dcdc396ec418fd244dae5f5286438920.jpg",
+    productPrice: "170 €",
+    productName: "covered unisex Steel Watch",
+    oldPrice: "290 €",
+    status: "20 %",
+  },
+  {
+    productId: "21",
+    productImage: "./watches-images/5354141035d12c6ebc3ba48c50157422 (1).jpg",
+    productPrice: "120 €",
+    productName: "Unisex Steel Watch",
+    oldPrice: "190 €",
+    status: "20 %",
+  },
+  {
+    productId: "22",
+    productImage: "./watches-images/af214896188f387c72e76a4ca7661591.jpg",
+    productPrice: "240 €",
+    productName: "white watch for women",
+    oldPrice: "350 €",
+    status: "20 %",
+  },
+  {
+    productId: "23",
+    productImage: "./watches-images/c67ad5148c3671aa67e0cf2afa81156a.jpg",
+    productPrice: "230 €",
+    productName: "Steel watch for women",
+    oldPrice: "300 €",
+    status: "20 %",
+  },
+  {
+    productId: "24",
+    productImage: "./watches-images/d3ecd7bfea66af95f86c538be409f236.jpg",
+    productPrice: "420 €",
+    productName: "Steel watch for women",
+    oldPrice: "310 €",
+    status: "20 %",
+  },
+  {
+    productId: "25",
+    productImage: "./watches-images/2190228fab9e04ad953bd4b8012b5c28.jpg",
+    productPrice: "310 €",
+    productName: "Women's Steel Watch with Zirconia",
+    oldPrice: "400 €",
+    status: "20 %",
+  },
+];
+
+const watchesContainer = document.querySelector(".watch-products");
+
+watches.forEach((item) => {
+  // Create div element for each item
+  const itemDiv = document.createElement("div");
+  itemDiv.className = "item";
+
+  // Create image element
+  const img = document.createElement("img");
+  img.className = "products";
+  img.src = item.productImage;
+
+  // Create paragraphs for price, product name, old price, and discount
+  const price = document.createElement("p");
+  price.className = "price";
+  price.textContent = item.productPrice;
+
+  const productName = document.createElement("p");
+  productName.className = "product-name";
+  productName.textContent = item.productName;
+
+  const oldPrice = document.createElement("p");
+  oldPrice.className = "old-price";
+  oldPrice.textContent = item.oldPrice;
+
+  const discount = document.createElement("p");
+  discount.className = "onSale";
+  discount.textContent = item.status;
+
+  const cartBtn = document.createElement("button");
+  cartBtn.classList.add("cart-btn");
+  cartBtn.classList.add("js-cart-btn");
+  cartBtn.setAttribute('data-product-id', item.productId)
+  cartBtn.textContent = "Add to cart";
+
+  changeOpacityBtn(itemDiv, cartBtn);
+
+  // Append elements to item div
+  itemDiv.appendChild(img);
+  itemDiv.appendChild(price);
+  itemDiv.appendChild(productName);
+  itemDiv.appendChild(oldPrice);
+  itemDiv.appendChild(discount);
+  itemDiv.appendChild(cartBtn);
+
+  // Append item div to sales container
+  watchesContainer.appendChild(itemDiv);
+});
+
+watchArrow2.addEventListener("click", () => {
+  watchesContainer.style.scrollBehavior = "smooth";
+  watchesContainer.scrollLeft += 271;
+  console.log("clicked");
+});
+
+watchArrow1.addEventListener("click", () => {
+  watchesContainer.style.scrollBehavior = "smooth";
+  watchesContainer.scrollLeft -= 271;
+  console.log("clicked");
+});
+
+function AddButton() {
+  const addToCartBtn = document.querySelectorAll(".js-cart-btn");
+  addToCartBtn.forEach((button) => {
+    button.addEventListener("click", () => {
+      const productId = button.dataset.productId;
+      addToCart(productId);
+      console.log(productId);
+    });
+  });
+}
+
+
+
+AddButton();
+updateCartCount();
