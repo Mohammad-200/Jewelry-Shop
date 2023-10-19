@@ -254,7 +254,7 @@ plusEl3.addEventListener("click", () => {
 plusEl4.addEventListener("click", () => {
   imageRingEl.style.opacity = 0;
   setTimeout(() => {
-    imageRingEl.src = ".video-pics/ring-monogramm.jpeg";
+    imageRingEl.src = "./video-pics/ring-monogramm.jpeg";
     imageRingEl.style.opacity = 1;
   }, 200);
 });
