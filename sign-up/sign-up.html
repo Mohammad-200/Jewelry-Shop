@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign-up.css">
+    <title>Sign Up Form</title>
+</head>
+
+<body>
+    <div class="popup" id="popup-1">
+        <div class="overlay">
+            <div class="content">
+                <div class="close-btn">&times;</div>
+                <p>Please write your:</p>
+                <div class="inputs">
+                    <label for="fullname">fullName:</label>
+                    <input type="text" id="fullname" name="fullName" required>
+                </div>
+                <div class="inputs">
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="inputs">
+                    <label for="password">password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="inputs">
+                    <label for="confirmPassword">Confirm password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="sign-up-btn">
+                    <button class="submitBtn">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="sign-up.js"></script>
+</body>
+
+</html>

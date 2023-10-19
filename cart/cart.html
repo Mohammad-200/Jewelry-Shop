@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Kumbh+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;500;700&family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="back-arrow">
+            <span>&#x3c;</span>
+            <a href="../index.html">Go back to shopping</a>
+        </div>
+        <div class="logo">
+            <p>Jewelry</p>
+            <p>Your Beauty</p>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="information-container">
+                <div class="personal-data-div">
+                    <div class="register-btn">
+                        <p>Sign up for placing the order</p>
+                        <button class="signup-btn">Sign up</button>
+                     </div>
+                    <div class="contact-info">
+                        <p>1. Contact data</p>
+                        <p>Peronal details*</p>
+                     </div>
+                <div class="personal-details">
+                    <div class="fisrt-info-grp">
+                        <div class="input-group">
+                            <label for="firstName">First Name*</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phoneNumber">Phone Number*</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                         </div>
+                    </div>
+                    <div class="second-info-grp">
+                         <div class="input-group">
+                            <label for="lastName">Last Name*</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                          </div>
+                         <div class="input-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required>
+                         </div>
+                    </div>
+                </div>
+                </div>
+                <!-- delivery -->
+                <div class="delivery-info">
+                    <div class="delivery-container">
+                        <div class="header-div">
+                            <p>2. Delivery Address</p>
+                            <p>Personal data*</p>
+                        </div>
+                        <div class="delivery-address">
+                            <div class="address-group">
+                                <label for="address">Adress*</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+                            <div class="address-group2">
+                                <div class="address-group">
+                                    <label for="country">Country*</label>
+                                    <input type="text" id="country" name="country" required>
+                                </div>
+                                <div class="address-group">
+                                    <label for="city">City*</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-note">
+                            <label for="note">Note</label>
+                            <textarea id="note" name="note" rows="4" cols="50"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment -->
+                <div class="payment-method">
+                    <div class="payment-container">
+                        <div class="payment-header">
+                            <p>3. Method of Payment</p>
+                            <p>Personal date*</p>
+                        </div>
+                        <div class="payment-body">
+                            <div class="ondelivery">
+                                <input type="radio" id="payment" name="payment">
+                                <label for="payment">Payment on delivery</label>
+                            </div>
+                            <div class="online">
+                                <input type="radio" id="online" name="payment">
+                                <label for="online">Online payemnt</label>
+                                <img src="cards-images/google-pay.svg">
+                                <img src="cards-images/mastercard.svg">
+                                <img src="cards-images/visa.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-info">
+                <div class="products-cart">
+                    <div class="products-header">
+                        <p>Your cart: </p>
+                        <img src="cards-images/edit-picture.png">
+                    </div>
+
+                    <div class="products js-order-summary">
+                        <!-- <div class="product" id="product1">
+                            <div class="product-image">
+                                <img src="cards-images/8b1264b1aea283b1cf8d9962b090f46d.jpg" alt="Silver Ring">
+                            </div>
+                            <div class="product-details">
+                                <h2 class="product-title">Silver Ring</h2>
+                                <div class="quantity">
+                                    <p class="quantity-label">Amount:</p>
+                                    <button class="quantity-btn minus-btn">-</button>
+                                    <input class="quantity-input" id="quantity-input" type="text" value="1">
+                                    <button class="quantity-btn plus-btn">+</button>
+                                </div>
+                                <div class="size">
+                                    <label for="size">Size:</label>
+                                    <select id="size" name="size">
+                                        <option value="50">Size 50</option>
+                                        <option value="53">Size 53</option>
+                                        <option value="60">Size 60</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <div class="discount">
+                                    <p class="discount-percentage">-20%</p>
+                                </div>
+                                <div class="price">
+                                    <p class="new-price">380 $</p>
+                                </div>
+                            </div>
+                            <div class="delete-logo">
+                                <i class="fa fa-trash-o" style="font-size:24px"></i>
+                            </div>
+                        </div>
+
+                        <div class="product" id="product2">
+                            <div class="product-image">
+                                <img src="cards-images/download (1).png" alt="Silver Ring">
+                            </div>
+                            <div class="product-details">
+                                <h2 class="product-title">Silver Ring</h2>
+                                <div class="quantity">
+                                    <p class="quantity-label">Amount:</p>
+                                    <button class="quantity-btn minus-btn">-</button>
+                                    <input class="quantity-input" id="quantity-input" type="text" value="1">
+                                    <button class="quantity-btn plus-btn">+</button>
+                                </div>
+                                <div class="size">
+                                    <label for="size">Size:</label>
+                                    <select id="size" name="size">
+                                        <option value="50">Size 50</option>
+                                        <option value="53">Size 53</option>
+                                        <option value="60">Size 60</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <div class="discount">
+                                    <p class="discount-percentage">-20%</p>
+                                </div>
+                                <div class="price">
+                                    <p class="new-price">120 $</p>
+                                </div>
+                            </div>
+                            <div class="delete-logo">
+                                <i class="fa fa-trash-o" style="font-size:24px"></i>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="discount-container">
+                    <p>Promo Code:</p>
+                    <div class="code-input">
+                        <input placeholder="Place the promo code">
+                        <button>Apply</button>
+                    </div>
+                </div>
+                <div class="final-price-container">
+                    <div class="price-container1">
+                        <p id="subtotal">Subtotal:</p>
+                        <p id="delivery">Delivery:</p>
+                        <p id="total">Total:</p>
+                    </div>
+                    <div class="price-container2">
+                        <p class="subtotal-price" id="subtotal">0 €</p>
+                        <p id="delivery">0 €</p>
+                        <p class="final-price" id="total">0 €</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="popup" id="popup-1">
+                <div class="overlay">
+                    <div class="content">
+                        <form>
+                            <div class="close-btn">&times;</div>
+                            <p>Please write your:</p>
+                            <div class="inputs">
+                                <label for="fullname">fullName:</label>
+                                <input type="text" id="fullname" name="fullName" required>
+                            </div>
+                            <div class="inputs">
+                                <label for="email">email:</label>
+                                <input type="email" id="sign-up-email" name="email" required>
+                            </div>
+                            <div class="inputs">
+                                <label for="password">password:</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="inputs">
+                                <label for="confirmPassword">Confirm password:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            <div class="sign-up-btn">
+                            <button class="submitBtn">Sign up</button>  
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+             </div>
+        </div>
+    </main>
+
+    <script type="module" src="cart.js"></script>
+    <script type="module" src="../checkout/checkout.js"></script>
+</body>
+</html>

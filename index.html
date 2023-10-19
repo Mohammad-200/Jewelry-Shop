@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEWELRY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/dimond-nobackround.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Kumbh+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;500;700&family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <p>Jewelry</p>
+                    <p>your beauty</p>
+                </div>
+                    <ul>
+                        <li class="pro"><a href="#newArrival-section">Products</a></li>
+                        <li class="watches"><a href="#watch-products">Watches</a></li>
+                        <li class="3d-view"><a href="#3D-view">3D view</a></li>
+                        <li class="sales"><a href="#sales-products">Sales</a></li>
+                    </ul>
+                <div class="cart">
+                    <a href="./cart/cart.html"><i class="fa fa-shopping-bag" style="font-size:24px;"></i></a>
+                    <p class="products-in-cart js-products-in-cart">0</p>
+                    <img class="userLog-img" src="images/user-log-picture.jpg">
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    
+
+    <main>
+        <div class="main">
+            <div class="main-pics">
+                <div class="slides">
+                    <!--radio buttons -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!--radio buttons -->
+
+                    <!--slide images-->
+                    <div class="slide first">
+                        <img class="main-image" src="main-images/main-img1.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="main-images/banner-bridal5.png">
+                    </div>
+                    <div class="slide">
+                        <img src="main-images/main-img3.webp">
+                    </div>
+                    <div class="slide">
+                        <img src="main-images/main4.webp">
+                    </div>
+
+                    <!-- automatic navication -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                </div>
+                <!--manual navigation-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+
+            <!--products-->
+            <div id="newArrival-section" class="slider">
+                <h1 class="firstRow-h">New arrival</h1>
+                <div class="firstRow-container">
+                     <span class="firstRowArrow1">&#10148;</span>
+                    <div  class="firstRow-products">
+                        <!-- <div class="item">
+                            <img class="products" src="watches-images/2190228fab9e04ad953bd4b8012b5c28.jpg">
+                            <p class="price">825 €</p>
+                            <p class="product-name">14K Rose Gold Necklace with Diamonds 'Clover'</p>
+                            <p class="status">New</p>
+                            <button class="cart-btn">Add</button>
+                        </div>
+                        <div class="item">
+                            <img class="products" src="watches-images/2190228fab9e04ad953bd4b8012b5c28.jpg">
+                            <p class="price">825 €</p>
+                            <p class="product-name">14K Rose Gold Necklace with Diamonds 'Clover'</p>
+                            <p class="status">New</p>
+                            <button class="cart-btn">Add</button>
+                        </div> -->
+                </div>
+                <span class="firstRowArrow2">&#10148;</span>
+                </div>
+                
+            </div>
+            <!--Video section-->
+            <h1  class="h1-video" id="3D-view">SPEACIAL</h1>
+            <div class="video-container" id="video-container">
+                <div class="video-content">
+                    <video id="videoPlayer">
+                        <source src="video-pics/ring.mp4">
+                    </video>
+                    <img id="ring-image" class="ring-image"src="video-pics/ring-diamonds.jpeg" alt="ring-image">
+                    <div class="repeat">
+                        <img  src="video-pics/repeat-picture.png">
+                        <button class="video-button">3D play</button>  
+                    </div>
+                    <div class="video-icons">
+                        <div class="icons-container">
+                        <img id="plus-icon1" class="plus-icon1 plus-icon" src="video-pics/plus-icon.svg.png">
+                        <img  class="plus-icon2 plus-icon" src="video-pics/plus-icon.svg.png">
+                        <img  class="plus-icon3 plus-icon" src="video-pics/plus-icon.svg.png">
+                        <img  class="plus-icon4 plus-icon" src="video-pics/plus-icon.svg.png">
+                        </div> 
+                    </div>
+                </div>
+            </div> 
+            <!--Sales part-->
+            <div class="sales-cont" id="sales-products">
+                <div class="sales-header">
+                    <h2 class="sales-header">Sales</h2>
+                </div>
+                <div class="arrows-sales-container">
+                    <span class="arrow1">&#10148;</span>
+                    <div class="sales-container">
+                    <!-- <div class="item">
+                        <img class="products" src="onsale-products/3aa9d11edfabe731e414c016f78b0596.jpg">
+                        <p class="price">180 €</p>
+                        <p class="product-name">14k Rose Gold Ring with Swarovski</p>
+                        <p class="old-price">245 €</p>
+                        <p class="onSale">20 %</p>
+                    </div-->
+                    
+                </div>
+                    <span class="arrow2">&#10148;</span>
+                </div>
+            </div>
+            <h2 class="watches-header" id="watch-products">Watches</h2>
+            <div class="video-container">
+                <div class="video-content">
+                    <video id="watchVideoPlayer">
+                        <source src="watches-images/watch.mp4">
+                    </video>
+                    <img id="watch-image" class="watch-image"src="watches-images/watch-strap.jpeg" alt="watch-image">
+                    <div class="repeatWatch">
+                        <img  src="video-pics/repeat-picture.png">
+                        <button class="video-button">3D play</button>  
+                    </div>
+                    <div class="watch-video-icons">
+                        <div class="icons-container">
+                        <img id="watch-plus-icon1" class="watch-plus-icon1 watch-plus-icon" src="video-pics/plus-icon.svg.png">
+                        <img  class="watch-plus-icon2 watch-plus-icon" src="video-pics/plus-icon.svg.png">
+                        <img  class="watch-plus-icon3 watch-plus-icon" src="video-pics/plus-icon.svg.png">
+                        <img  class="watch-plus-icon4 watch-plus-icon" src="video-pics/plus-icon.svg.png">
+                        </div> 
+                    </div>
+                </div>
+            </div> 
+            <!-- watch products -->
+            <div class="watch-container">
+                <div class="watches-arrows-container">
+                     <span class="watchArrow1">&#10148;</span>
+                    <div class="watch-products">
+                        <!-- <div class="item">
+                            <img class="products" src="watches-images/2190228fab9e04ad953bd4b8012b5c28.jpg">
+                            <p class="price">825 €</p>
+                            <p class="product-name">14K Rose Gold Necklace with Diamonds 'Clover'</p>
+                            <p class="old-price">1080 €</p>
+                            <p class="onSale">20 %</p>
+                        </div> -->
+                </div>
+                <span class="watchArrow2">&#10148;</span>
+                </div>
+            </div>
+
+            <!-- last part -->
+            <h1 id="collections">Collections</h1>
+            <div class="main-container">
+                <div class="left-side">
+                    <img id="wedding" src="last-images/wedding.jpg">
+                    <img id="gifts" src="last-images/gifts.jpg">
+                    <img id="diamonds-img" src="last-images/diamonds.jpg">
+                </div>
+                <div class="right-side">
+                    <div class="words">
+                        <p>Jewelry and watch capsule collections</p>
+                        <p>are unique developments of our own jewelry design office.</p>
+                        <p>We create more than just design: we create trends.</p>
+                    </div>
+                    <img id="infinity" src="last-images/infinity.jpg">
+                    <div class="lastImages-container">
+                        <img id="lastWatch" src="last-images/watch.jpg">
+                        <img id="newLook" src="last-images/new-look.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ending -->
+            <div class="ending">
+                <div class="main-ending">
+                    <p>SO COOL LOVE</p>
+                </div>
+                <div class="ending-words">
+                    <p>Each gem in your jewelry box has a special story associated with it.</p>
+                    <p>All those elusive moments you want to keep forever are in JEWELRY</p>
+                    <p>This is what is in your heart.</p>
+                </div>
+            </div>
+
+    </main>
+    <script type="module" src="website.js"></script>
+</body>
+</html>

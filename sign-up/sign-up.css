@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.popup .overlay {
+    position: fixed;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    
+
+}
+
+
+.overlay {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    background: #fff;
+    z-index: 2;
+}
+
+
+
+
+.close-btn {
+    font-size: 20px;
+    color: #ff3333;
+    cursor: pointer;
+    float: right;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+.inputs {
+    margin: 15px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#fullname,
+#email,
+#password,
+#confirmPassword {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+#fullname:focus,
+#email:focus,
+#password:focus,
+#confirmPassword:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.submitBtn {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submitBtn:hover {
+    background-color: #303030;
+}
+
