@@ -146,7 +146,7 @@ ul li a:hover {
 
 .navigation-manual {
   position: absolute;
-  bottom: 45%;
+  top: 580px;
   left: 50%;
   transform: translateX(-50%);
   width: 800px;
@@ -364,21 +364,22 @@ ul li a:hover {
 }
 
 .video-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
   position: relative;
-  margin: 10px;
-  margin-right: 100px;
+}
+
+.video {
+  width: 100%;
+  max-width: 600px;
+  margin-right: 80px;
+  outline: none;
 }
 
 .video-content {
-  display: flex;
-  justify-content: center;
-  margin-left: 200px;
-}
-
-video {
-  width: 600px;
-  margin-right: 80px;
-  outline: none;
+  position: relative;
 }
 
 .ring-image {
@@ -390,12 +391,13 @@ video {
 
 .repeat {
   position: absolute;
-  bottom: 0;
-  right: 58%;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  padding: 10px;
+  padding: 10px 0;
   border-radius: 20px;
   cursor: pointer;
   border-color: rgb(255, 255, 255);
@@ -428,6 +430,10 @@ video {
   border-radius: 50%;
 }
 
+#watchVideoPlayer {
+  width: 85%;
+}
+
 .plus-icon1,
 .plus-icon2,
 .plus-icon3,
@@ -440,25 +446,25 @@ video {
 
 .plus-icon1 {
   position: absolute;
-  right: 47%;
-  top: 37%;
+  left: 550px;
+  top: 230px;
 }
 
 .plus-icon2 {
   position: absolute;
-  right: 55%;
-  top: 23%;
+  left: 450px;
+  top: 150px;
 }
 
 .plus-icon3 {
   position: absolute;
-  right: 61%;
-  top: 43%;
+  left: 600px;
+  top: 300px;
 }
 
 .plus-icon4 {
   position: absolute;
-  right: 66%;
+  left: 260px;
   top: 68%;
 }
 
@@ -515,15 +521,11 @@ video {
   animation: shimmer 2s infinite linear;
 }
 
-/* .sales-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-} */
-
 .sales-container {
   width: 1500px;
   display: flex;
+  justify-content: start;
+  align-items: center;
   margin: 20px;
   position: relative;
   list-style: none;
@@ -639,26 +641,26 @@ video {
 
 .watch-plus-icon1 {
   position: absolute;
-  right: 50%;
+  left: 700px;
   top: 20%;
 }
 
 .watch-plus-icon2 {
   position: absolute;
-  right: 57%;
-  top: 29%;
+  left: 530px;
+  top: 35%;
 }
 
 .watch-plus-icon3 {
   position: absolute;
-  right: 70%;
+  left: 400px;
   top: 57%;
 }
 
 .watch-plus-icon4 {
   position: absolute;
-  right: 70%;
-  top: 18%;
+  left: 480px;
+  top: 30%;
 }
 
 .watch-plus-icon {
@@ -869,4 +871,44 @@ video {
 
 .ending-words p {
   padding-bottom: 10px;
+}
+
+@media Screen and (max-width: 677px) {
+  .navbar-container ul {
+    display: none;
+  }
+}
+
+@media Screen and (max-width: 1250px) {
+  .ring-image {
+    width: 350px;
+    height: 470px;
+  }
+
+  #videoPlayer,
+  #watchVideoPlayer {
+    width: 80%;
+    outline: none;
+  }
+
+  .video-container {
+    justify-content: center;
+  }
+
+  .plus-icon1,
+  .plus-icon2,
+  .plus-icon3,
+  .plus-icon4 {
+    display: none;
+  }
+}
+
+@media Screen and (max-width: 1070px) {
+  .video-container {
+    flex-direction: column;
+  }
+
+  .repeat {
+    left: 45%;
+  }
 }
