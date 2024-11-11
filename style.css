@@ -365,10 +365,10 @@ ul li a:hover {
 
 .video-container {
   display: flex;
-  width: 100%;
   justify-content: space-evenly;
   align-items: center;
-  position: relative;
+  gap: 50px;
+  margin-right: 10%;
 }
 
 .video {
@@ -380,11 +380,18 @@ ul li a:hover {
 
 .video-content {
   position: relative;
+  text-align: start;
+  width: 70%;
+  text-align: center;
+}
+
+#watchVideoPlayer {
+  width: 100%;
 }
 
 .ring-image {
   width: 500px;
-  height: 670px;
+  height: 600px;
   object-fit: cover;
   transition: opacity 0.5s ease;
 }
@@ -430,10 +437,6 @@ ul li a:hover {
   border-radius: 50%;
 }
 
-#watchVideoPlayer {
-  width: 85%;
-}
-
 .plus-icon1,
 .plus-icon2,
 .plus-icon3,
@@ -452,19 +455,19 @@ ul li a:hover {
 
 .plus-icon2 {
   position: absolute;
-  left: 450px;
-  top: 150px;
+  left: 550px;
+  top: 160px;
 }
 
 .plus-icon3 {
   position: absolute;
-  left: 600px;
+  left: 680px;
   top: 300px;
 }
 
 .plus-icon4 {
   position: absolute;
-  left: 260px;
+  left: 360px;
   top: 68%;
 }
 
@@ -612,13 +615,6 @@ ul li a:hover {
   animation: shimmer 2s infinite linear;
 }
 
-.watch-image {
-  width: 500px;
-  height: 670px;
-  object-fit: cover;
-  transition: opacity 0.5s ease;
-}
-
 .watch-video-icons {
   width: 40px;
   height: 40px;
@@ -627,48 +623,6 @@ ul li a:hover {
   justify-content: center;
   background-color: #ffffff;
   border-radius: 50%;
-}
-
-.watch-plus-icon1,
-.watch-plus-icon2,
-.watch-plus-icon3,
-.watch-plus-icon4 {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  display: block;
-}
-
-.watch-plus-icon1 {
-  position: absolute;
-  left: 700px;
-  top: 20%;
-}
-
-.watch-plus-icon2 {
-  position: absolute;
-  left: 530px;
-  top: 35%;
-}
-
-.watch-plus-icon3 {
-  position: absolute;
-  left: 400px;
-  top: 57%;
-}
-
-.watch-plus-icon4 {
-  position: absolute;
-  left: 480px;
-  top: 30%;
-}
-
-.watch-plus-icon {
-  transition: opacity 0.5s ease;
-}
-
-.watch-plus-icon.hidden {
-  opacity: 0;
 }
 
 @keyframes flash {
@@ -699,27 +653,6 @@ ul li a:hover {
 
 .transition-effect {
   transition: all 1s ease;
-}
-
-.repeatWatch {
-  position: absolute;
-  bottom: 0;
-  right: 58%;
-  display: flex;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  border-color: rgb(255, 255, 255);
-  transition: opacity 0.2s ease;
-}
-
-.repeatWatch img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  background-color: #fff;
 }
 
 .watches-arrows-container {
@@ -788,6 +721,10 @@ ul li a:hover {
   width: 450px;
   height: auto;
   margin: 15px;
+}
+
+.left-side,
+.right-side {
 }
 
 #wedding {
@@ -873,6 +810,99 @@ ul li a:hover {
   padding-bottom: 10px;
 }
 
+.repeatWatch {
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  border-color: rgb(255, 255, 255);
+  transition: opacity 0.2s ease;
+}
+
+.repeatWatch img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: #fff;
+}
+
+.new-try {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  margin-right: 10%;
+}
+
+.watch-content {
+  width: 50%;
+  max-width: 800px;
+  position: relative;
+}
+
+.watch-content video {
+  width: 100%;
+  object-fit: cover;
+}
+
+.watch-plus-icon1,
+.watch-plus-icon2,
+.watch-plus-icon3,
+.watch-plus-icon4 {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: block;
+}
+
+.watch-plus-icon1 {
+  position: absolute;
+  left: 670px;
+  top: 20%;
+}
+
+.watch-plus-icon2 {
+  position: absolute;
+  left: 430px;
+  top: 23%;
+}
+
+.watch-plus-icon3 {
+  position: absolute;
+  left: 200px;
+  top: 50%;
+}
+
+.watch-plus-icon4 {
+  position: absolute;
+  left: 250px;
+  top: 55%;
+}
+
+.watch-plus-icon {
+  transition: opacity 0.5s ease;
+}
+
+.watch-plus-icon.hidden {
+  opacity: 0;
+}
+
+.watch-image {
+  width: 100%;
+  max-width: 500px;
+  max-height: 600px;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
 @media Screen and (max-width: 677px) {
   .navbar-container ul {
     display: none;
@@ -880,7 +910,8 @@ ul li a:hover {
 }
 
 @media Screen and (max-width: 1250px) {
-  .ring-image {
+  .ring-image,
+  .watch-image {
     width: 350px;
     height: 470px;
   }
@@ -891,15 +922,20 @@ ul li a:hover {
     outline: none;
   }
 
-  .video-container {
-    justify-content: center;
-  }
-
   .plus-icon1,
   .plus-icon2,
   .plus-icon3,
-  .plus-icon4 {
+  .plus-icon4,
+  .watch-plus-icon1,
+  .watch-plus-icon2,
+  .watch-plus-icon3,
+  .watch-plus-icon4 {
     display: none;
+  }
+  .main-container,
+  .lastImages-container {
+    flex-direction: column;
+    margin: 0 auto;
   }
 }
 
@@ -908,7 +944,35 @@ ul li a:hover {
     flex-direction: column;
   }
 
+  .ring-image,
+  .watch-image {
+    display: none;
+  }
+
+  .video-content,
+  .watch-content {
+    width: 100%;
+  }
+
   .repeat {
-    left: 45%;
+    left: 50%;
+  }
+
+  .ending {
+    width: 100%;
+    margin: 0;
+  }
+
+  .main-ending p {
+    font-size: 3rem;
+  }
+
+  .ending-words {
+    width: 400px;
+    text-align: center;
+  }
+
+  #collections {
+    font-size: 3rem;
   }
 }
